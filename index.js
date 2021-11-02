@@ -47,9 +47,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
+let number = "1999";
+console.log(parseInt(number));
 
 /*
 Task 1d - Multiply
@@ -60,10 +59,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b) {
+  return a * b;
 }
-
+multiply(10, 2);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
