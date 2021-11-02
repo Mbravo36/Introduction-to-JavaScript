@@ -19,8 +19,13 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 18;
+if (votingAge >= 18){
+  console.log(true);
+} else {
+  console.log(false);
+}
+console.log('task 1a:', votingAge)
 
 /*
 Task 1b - Values
@@ -32,8 +37,13 @@ Do the following:
 
    HINT: no function required
 */
+let child = 'brat';
+let behavior = 'tantrum';
 
-
+if (behavior === 'tantrum'){
+  child = 'grounded';
+}
+console.log('task 1b:', child)
 
 
 
@@ -48,7 +58,7 @@ Do the following:
    HINT: look up the Number method
 */
 let number = "1999";
-console.log(parseInt(number));
+console.log('task 1c:', parseInt(number));
 
 /*
 Task 1d - Multiply
@@ -62,7 +72,7 @@ Do the following:
 function multiply(a, b) {
   return a * b;
 }
-multiply(10, 2);
+console.log('task 1d:', multiply(3, 5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -75,11 +85,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
 
-
+console.log('task 2:', dogYears(29));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -149,11 +159,30 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
 
-function game(user, computer){
-  /*add your code here*/
+if (computer <= 0.34){
+  computer = `rock`;
+} else if (computer <= 0.67){
+  computer = `paper`;
+} else if (computer > 0.67){
+  computer = `scissors`;
 }
 
+function game(user, computer){
+  if (user === computer){
+    return `it's a tie`;
+  } else if (user === `rock` && computer === `scissors`){
+    return `you win!`;
+  } else if (user === `paper` && computer === `rock`){
+    return `you win!`;
+  } else if (user === `scissors` && computer === `paper`){
+    return `you win!`;
+  } else {
+    return `you lose!`;
+  }
+}
+console.log('task 4:', game('scissors', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
